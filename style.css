@@ -1,0 +1,610 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Creepster&family=Dancing+Script:wght@500&family=Nosifer&family=Pacifico&family=Prata&family=Roboto:wght@100&family=Russo+One&display=swap');
+
+/* Define a custom color variable */
+:root{
+    --orange:#FF9814;
+}
+
+/* Global styling */
+/* Set the font family for all elements to 'Open Sans' or a sans-serif fallback */
+*{
+    font-family: 'Open Sans', sans-serif;
+    /* Reset margin and padding to 0 for consistent spacing */
+    margin:0; padding:0;
+    /* Ensure that the box-sizing includes borders and padding in the element's total width and height */
+    box-sizing: border-box;
+    /* Remove text decoration (e.g., underlines) from all elements */
+    text-decoration: none;
+    /* Remove the default outline that appears when elements are clicked or focused */
+    outline:none;
+    /* Remove the default border style from elements */
+    border:none;
+     /* Capitalize the text transform of all elements */
+    text-transform: capitalize;
+     /* Apply a smooth transition effect for property changes with a 0.2s duration */
+    transition: all .2s linear;
+}
+
+/* Style for selected text */
+*::selection{
+    /* Set the background color for selected text using a CSS variable */
+    background:var(--orange);
+    /* Set the text color for selected text to white */
+    color:#fff;
+}
+
+
+/* Set base font size for responsiveness */
+html{
+    /* Set the base font size to 62.5% of the default, which makes it easier to calculate rem units */
+    font-size: 62.5%;
+    /* Hide horizontal overflow, preventing horizontal scrolling */
+    overflow-x: hidden;
+}
+
+/* Header styling */
+header{
+    /* Fix the header position on the screen */
+    position: fixed;
+    /* Align the header to the top */
+    top:0;
+    /* Align the header to the left */
+    left: 0;
+    /* Set the stacking order of the header */
+    z-index: 1000;
+    /* Set the background color of the header to white */
+    background:#fff;
+    /* Add a shadow to the header */
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+     /* Set the width of the header to 100% of the viewport */
+    width:100%;
+}
+
+/* Styling for shipping message */
+header .heading{
+     /* Set the font size to 10 pixels */
+    font-size: 10px;
+    /* Apply bold font weight */
+    font-weight: bold;
+    /* Set the text color to a shade of turquoise */
+    color:#70d7d9;
+    /* Add padding around the content */
+    padding:1rem;
+    /* Center-align the text within the element */
+    text-align: center;
+}
+
+/* Styling for main heading */
+header .head{
+    /* Set the font size to 15 pixels */
+    font-size: 15px;
+     /* Apply bold font weight */
+    font-weight: bold;
+    /* Set the text color to white */
+    color:white;
+    /* Set the background color using RGB values */
+    background-color:rgb(97, 161, 169);
+    /* Add padding around the content */
+    padding:1rem;
+    /* Center-align the text within the element */
+    text-align: center;
+}
+
+/* Styling for mobile menu icon */
+header #menu{
+    /* Set the font size to 3 rem */
+    font-size: 3rem;
+    /* Set the color of the menu icon */
+    color:#438198;
+    /* Change the cursor to a pointer when hovering over the menu icon */
+    cursor: pointer;
+    /* Initially hide the menu icon */
+    display: none;
+}
+
+/* Styling for navigation bar */
+header .navbar ul{
+    /* Use flexbox to arrange list items horizontally */
+    display: flex;
+    /* Remove default list bullet points */
+    list-style: none;
+    /* Add padding around the list */
+    padding:1rem; 
+    /* Set the background color of the navigation bar */
+    background-color: #405c72;
+}
+
+/* Styling for navigation links in the navbar */
+header .navbar ul li{
+    /* Set margins to space out the navigation links */
+    margin:0 1.5rem;
+}
+
+/* Styling for navigation links in the navbar */
+header .navbar ul li a{
+    /* Set the font size for the navigation links */
+    font-size: 2rem;
+    /* Set the color of the navigation link text to white */
+    color:#fff;
+}
+
+/* Styling for navigation links on hover */
+header .navbar ul li a:hover{
+    /* Set the color of the navigation link text when hovered */
+    color:#444;
+}
+
+
+
+/* Show navigation labels when corresponding input is checked */
+input:checked + .slide-container .nav label { 
+    display: block;
+ }
+/* Reset some default styles */
+/* Set common styles for all elements to normalize layout */
+* {
+    /* Remove default margin */
+    margin: 0;
+    /* Remove default padding */
+    padding: 0;
+    /* Use border-box box-sizing for consistent sizing */
+    box-sizing: border-box;
+}
+
+ 
+/* Style the footer with a specific background color */
+.footer{
+    background:#438198;
+}
+
+/* Create a flex container for the boxes within the footer */
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    /* Allow boxes to wrap to the next line */
+    flex-wrap: wrap;
+}
+
+/* Style the individual boxes within the footer */
+.footer .box-container .box{
+    /* Add margin around each box */
+    margin:2rem;
+    /* Allow boxes to flex-grow and flex-shrink */
+    flex:1 1 30rem;
+}
+
+/* Style the heading within the boxes */
+.footer .box-container .box h3{
+    /* Set font size for the heading */
+    font-size: 2.5rem;
+    /* Set text color to white */
+    color:#fff;
+}
+
+/* Style paragraphs within the boxes */
+.footer .box-container .box p{
+    /* Set font size for paragraphs */
+    font-size: 1.4rem;
+    /* Set text color to light gray */
+    color:#eee;
+    /* Add padding above and below the paragraphs */
+    padding:1rem 0;
+}
+
+/* Style links within the boxes */
+.footer .box-container .box a{
+    /* Set font size for links */
+    font-size: 1.8rem;
+    /* Set text color to light gray */
+    color:#eee;
+    /* Add padding above and below the links */
+    padding:.4rem 0;
+    /* Make links block-level for better spacing */
+    display: block;
+}
+
+/* Apply underline text decoration on links within boxes when hovered */
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+/* Center align contents of the second box within the footer */
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+
+/* Style the form within the footer's box container */
+.footer .box-container form{
+    /* Display form elements in a row */
+    display: flex;
+    /* Vertically align form elements */
+    align-items: center;
+}
+
+/* Style the email input field within the footer form */
+.footer .box-container form input[type="email"]{
+    /* Set height of the input field */
+    height:4.1rem;
+    /* Occupy full width of its container */
+    width:100%;
+    /* Set font size for the input text */
+    font-size: 1.7rem;
+    /* Add horizontal padding to the input */
+    padding:0 1rem;
+}
+
+/* Adjust the margin of the button within the footer form */
+.footer .box-container form .btn{
+    /* Remove top margin from the button */
+    margin-top: 0;
+}
+
+/* Apply color and background changes on button hover within the footer form */
+.footer .box-container form .btn:hover{
+    /* Change text color on hover */
+    color:#333;
+    /* Change background color on hover */
+    background:#ccc;
+}
+
+/* Style the credit section within the footer */
+.footer .credit{
+    /* Set font size for the credit text */
+    font-size: 2rem;
+    /* Set background color */
+    background:#405c72;
+    /* Center-align the content */
+    text-align: center;
+    /* Set text color to white */
+    color:#fff;
+    /* Add padding to top and bottom, slight padding on sides */
+    padding:2rem 1rem;
+    /* Set normal font weight */
+    font-weight: normal;
+}
+
+/* Style links within the credit section */
+.footer .credit a{
+    /* Set text color for links using a CSS variable */
+    color:var(--orange);
+}
+
+
+/* Apply styles when the screen width is 500px or less */
+@media (max-width:500px){
+    /* Reduce the base font size to 50% for better mobile readability */
+    html{
+        font-size: 50%;
+    }
+
+    /* Style for the header element when the screen is narrower */
+    header{
+        /* Display header content in a row */
+        display: flex;
+        /* Vertically align header content */
+        align-items: center;
+        /* Distribute content to both ends */
+        justify-content: space-between;
+        /* Add padding on the sides */
+        padding:0 1rem;
+    }
+
+    /* Style for the menu icon when the screen is narrower */
+    header #menu{
+        /* Display the menu icon */
+        display: block;
+    }
+
+    /* Style for the navigation bar when the screen is narrower */
+    header .navbar{
+        /* Fix the navbar in place */
+        position: fixed;
+        /* Distance from the top of the screen */
+        top:6.2rem;
+        /* Move the navbar out of the screen to hide it */
+        right:-120%;
+        /* Make the navbar occupy the full screen height */
+        height:100%;
+        /* Make the navbar occupy the full screen width */
+        width:100%;
+        /* Add a top border with opacity */
+        border-top: .2rem solid rgba(0,0,0,.3);
+    }
+
+    /* Styles for the navigation bar in the header */
+    header .navbar ul{
+        /* Set the height to 100% of its container */
+        height:100%;
+        /* Set the width to 100% of its container */
+        width:100%;
+        /* Use flex layout with a column direction */
+        flex-flow: column;
+        /* Set background color to white */
+        background:#fff;
+        /* Add padding at the bottom */
+        padding-bottom: 15rem;
+    }
+
+    /* Styles for each list item in the navigation bar */
+    header .navbar ul li{
+        /* Center-align the text */
+        text-align: center;
+        /* Set the width to 100% of its container */
+        width:100%;
+        /* Add margin above and below */
+        margin:1rem 0;
+    }
+
+    /* Styles for links within list items */
+    header .navbar ul li a{
+        /* Set font size to 4rem */
+        font-size: 4rem;
+        /* Set text color to dark gray */
+        color:#333;
+        /* Display as a block-level element */
+        display: block;
+    }
+
+    /* Styles when hovering over links within list items */
+    header .navbar ul li a:hover{
+        /* Change text color on hover using a custom variable */
+        color:var(--orange);
+    }
+
+    /* Styles for the "fa-times" class, possibly an icon */
+    .fa-times{
+        /* Rotate the icon 180 degrees */
+        transform: rotate(180deg);
+    }
+
+    /* Styles for the navigation bar with the "nav-toggle" class in the header */
+    header .navbar.nav-toggle{
+        /* Align the nav-toggle element to the right */
+        right:0;
+    }
+
+    /* Styles for sections on the page */
+    section{
+        /* Add padding at the top */
+        padding-top: 5rem;
+    }
+
+    /* Styles for the last box within the footer's box container */
+    .footer .box-container .box:last-child{
+        /* Center-align the content within the last box */
+        text-align: center;
+    }
+
+    /* Styles for text within the last box of the footer's box container */
+    .footer .box-container .box:last-child p{
+        /* Set font size to 1.7rem */
+        font-size: 1.7rem;
+    }
+
+    /* Styles for forms within the last box of the footer's box container */
+    .footer .box-container .box:last-child form{
+        /* Use flex layout with a column direction */
+        flex-flow: column;
+    }
+
+    /* Styles for buttons within forms in the last box of the footer's box container */
+    .footer .box-container .box:last-child form .btn{
+        /* Add margin at the top */
+        margin-top: 1rem;
+        /* Set width to 100% of its container */
+        width:100%;
+    }
+
+}
+
+
+/* Add color and shadow to the input and textarea boxes */
+.boxshadow {
+    background-color: #f2f2f2; /* Background color */
+    border: 1px solid #ccc; /* Border color */
+    /* Add 10 pixels of padding around the element */
+    padding: 10px;
+    /* Add 10 pixels of margin at the bottom */
+    margin-bottom: 10px;
+    /* Apply a border radius of 5 pixels for rounded corners */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    /* Set the width of the element to 100% of its container */
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+/* Add color and shadow to the submit button */
+.btn {
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    /* Remove the button border */
+    border: none;
+    /* Add 10 pixels of padding on the top and bottom, and 20 pixels on the left and right */
+    padding: 10px 20px;
+    /* Apply a border radius of 5 pixels for rounded corners */
+    border-radius: 5px;
+    /* Change the cursor to a pointer when hovering over the button */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+/* Change color and shadow on hover */
+.boxshadow:hover, .btn:hover {
+    border-color: #007bff; /* Change border color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+}
+
+/* Styling for the section with class "contact" */
+.contact{
+    /* Set the minimum height of the section to 100% of the viewport height */
+    min-height: 100vh;
+    /* Use flex layout for the section */
+    display: flex;
+    /* Vertically align items in the center */
+    align-items: center;
+    /* Distribute space evenly around items horizontally */
+    justify-content: space-around;
+    /* Allow items to wrap to the next row if necessary */
+    flex-wrap: wrap;
+}
+
+/* Styling for the form within the contact section */
+.contact form{
+    /* Allow the form to grow and shrink as needed */
+    flex:1 1 40rem;
+    /* Add 2rem of padding around the form */
+    padding:2rem;
+    /* Add 1rem of margin around the form */
+    margin:1rem;
+    /* Add 4rem of margin at the top of the form */
+    margin-top: 4rem;
+    /* Add a subtle shadow effect to the form */
+    box-shadow: 0 0 .5rem rgba(0,0,0,.3);
+    /* Set the background color of the form */
+    background-color: rgba(207, 194, 194,0.5); /* Set the background color of the form */
+    /* Add 20px of padding within the form */
+    padding: 20px;
+    /* Apply a border radius of 10px for rounded corners */
+    border-radius: 10px;
+    /* Add a shadow effect to the form */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the content within the "contact" section */
+.contact .content{
+    /* Allow the content to grow and shrink as needed */
+    flex:1 1 40rem;
+    /* Add 3rem of padding on the top and bottom, and 1rem on the sides */
+    padding:3rem 1rem;
+}
+
+/* Styling for boxes within the form in the "contact" section */
+.contact form .box{
+    /* Set the width of the box to 100% of its container */
+    width:100%;
+    /* Set the text color to a dark gray */
+    color:#333;
+    /* Set the height of the box to 4rem */
+    height:4rem;
+    /* Set the font size to 1.7rem */
+    font-size: 1.7rem;
+    /* Add a bottom border with a shadow effect */
+    border-bottom: .2rem solid rgba(0,0,0,.3);
+    /* Preserve the original letter casing */
+    text-transform: none;
+    /* Add 1rem of margin on the top and bottom */
+    margin:1rem 0;
+    /* Box styling */
+    /* Add a solid border with a specific color */
+    border:1px solid rgb(201, 190, 190);
+    /* Apply a border radius of 5px for rounded corners */
+    border-radius:5px;
+    /* Add 10px of padding within the box */
+    padding:10px;   
+}
+
+/* Styling for the placeholder text within the box in the form */
+.contact form .box::placeholder{
+    /* Transform the placeholder text to capitalize */
+    text-transform: capitalize;
+}
+
+/* Styling when a box in the form is focused */
+.contact form .box:focus{
+     /* Change the border color on focus using a custom variable */
+    border-color: var(--orange);
+}
+
+/* Styling for the message box in the form */
+.contact form .message{
+    /* Set the height of the message box to 15rem */
+    height:15rem;
+    /* Disable the resizing of the message box */
+    resize: none;
+}
+
+/* Styling for headings within the content of the "contact" section */
+.contact .content h3{
+    /* Set the font size to 4rem */
+    font-size: 4rem;
+    /* Set the text color to whitesmoke */
+    color:whitesmoke;
+}
+
+/* Styling for paragraphs within the content of the "contact" section */
+.contact .content p{
+    /* Set the font size to 1.8rem */
+    font-size: 1.8rem;
+    /* Set the text color to whitesmoke */
+    color:whitesmoke;
+    /* Add 1rem of padding on the top and bottom */
+    padding:1rem 0;
+}
+
+/* Styling for icons within the content of the "contact" section */
+.contact .content .icons{
+    /* Set the font size to 1.7rem */
+    font-size: 1.7rem;
+    /* Set the text color to whitesmoke */
+    color:whitesmoke;
+    /* Add 0.7rem of padding on the top and bottom */
+    padding:.7rem 0;
+}
+
+/* Styling for icons using the "i" element within the content of the "contact" section */
+.contact .content .icons i{
+    /* Add 0.5rem of padding on the right side of the icon */
+    padding-right: .5rem;
+    /* Set the color of the icon using a custom variable */
+    color:var(--orange);
+}
+
+
+
+
+  /* Styles for the 'my-button' class */
+.my-button {
+    /* Padding */
+  padding: 10px 20px;
+  /* Background color */
+  background-color: #4cd5e1;
+  /* Text color */
+  color: white;
+  /* No border */
+  border: none;
+  /* Border radius */
+  border-radius: 5px;
+   /* Font size */
+  font-size: 16px;
+  /* Cursor style */
+  cursor: pointer;
+}
+
+/* Hover style for 'my-button' class */
+.my-button:hover {
+    /* Background color on hover */
+    background-color: #0056b3;
+}
+
+
+body.background {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200727/pngtree-vector-design-of-bluish-lights-bokeh-background-image_370357.jpg'); /* Replace 'background.jpg' with your image file path */
+    background-size: cover; /* Adjust the background size as needed */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Fixed background */
+    backdrop-filter: blur(10px);
+}
+
+h1{
+    color:#fff;
+    
+}
+table{
+    color:#eee;
+    font-size: medium;
+}
