@@ -142,7 +142,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     //creating a connection
     
     $conn=mysqli_connect($servername, $username, $password, $database);
-    $database = "CREATE DATABASE  $database";
+    $maindatabase = "CREATE DATABASE  $database";
    
     //die if connection failed
     if(!$conn)
