@@ -140,8 +140,9 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     $database="contacts";
 
     //creating a connection
-
+    
     $conn=mysqli_connect($servername, $username, $password, $database);
+    $database = "CREATE DATABASE  $database";
    
     //die if connection failed
     if(!$conn)
